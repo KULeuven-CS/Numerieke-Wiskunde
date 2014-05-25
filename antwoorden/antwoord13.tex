@@ -1,0 +1,27 @@
+Ik heb het niet uitgewerkt.\\
+Maar:\\ (met dank aan Gust Verbruggen hebben we de uitwerking)
+
+We willen volgende expressie berekenen
+
+\[y = e^{x^2} - 1 - x\]
+
+Hier zal de benadering, na het uitvoeren van de verschillende stappen, gegeven worden door
+
+\[\bar{y} = (e^{x^2 (1 + \epsilon_1)}(1 + \epsilon_2) - 1 - x^2(1 + \epsilon_1))(1 + \epsilon_3)\]
+
+Als we x als een parameter zien, kunnen we de expressie zien in functie van de epsilons \[\bar{y} \approx F(\epsilon_1,\epsilon_2,\epsilon_3)\], dewelke we rond (0,0,0) kunnen benaderen dmv. Taylorontwikkeling (omdat de $\epsilon_i$ zeer klein zullen zijn). We berekenen $\frac{\partial F}{\partial \epsilon_1}(\epsilon_1,0,0)$, $\frac{\partial F}{\partial \epsilon_2}(0,\epsilon_2,0)$ en $\frac{\partial F}{\partial \epsilon_3}(0,0,\epsilon_3)$ (dit mag zo gebeuren omdat we ze uiteindelijk toch zullen evalueren in (0,0,0); de vermenigvuldiging met $(1+\epsilon_i)$ mag verwaarloosd worden voor de constante factoren en zo kunnen we de af te leiden functie op voorhand vereenvoudigen).
+
+\[
+\frac{\partial F}{\partial \epsilon_1}(\epsilon_1,0,0) = x^2 (e^{x^2 (1 + \epsilon_1)} - 1)
+\]
+\[
+\frac{\partial F}{\partial \epsilon_2}(0,\epsilon_2,0) = e^{x^2}
+\]
+\[
+\frac{\partial F}{\partial \epsilon_3}(0,0,\epsilon_3) = e^{x^2} - 1 - x^2
+\]
+
+Ontwikkeling rond (0,0,0) wordt dan
+\[\bar{y} \approx y + \epsilon_1 x^2 (e^{x^2} - 1) + \epsilon_2 e^{x^2} + \epsilon_3 y\]
+en dit is de benaderde waarde. Hieruit kan je dan verder de absolute en relatieve fout berekenen.
+\\

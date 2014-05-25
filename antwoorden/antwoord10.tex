@@ -1,0 +1,19 @@
+Er zijn twee methodes om dit probleem aan te pakken: de \textit{methode der onbepaalde coefficienenten} en de \textit{methode met confluente interpolatiepunten}. Mij leek de eerste methode eenvoudiger.\\
+\\
+We kunnen de veelterm bepalen door expliciet interpolatievoorwaarden op te leggen. Er moet in dit geval voldaan worden aan:
+
+\[
+\sigma(s,i) = \left\{
+    \begin{array}{ccccccccc}
+        a_0 & + & a_1x_0 & + & a_2x_0^2 & + & a_3x_0^3 & = & f_0\\
+        a_0 & + & a_1x_1 & + & a_2x_1^2 & + & a_3x_1^3 & = & f_1\\
+            &   & a_1    & + & 2a_2x_0 &+& 3a_3x_0^2 & = & f'_0 \\
+            &   & a_1    & + & 2a_2x_1 &+& 3a_3x_1^2 & = & f'_1\\
+    \end{array}
+\right.
+\]
+De oplossing van dit stelsel geeft de Hermite-interpolerende veelterm.
+\[
+a_0 + a_1x + a_2x^2 + a_3x^3
+\]
+De oplossing is uiteraard onderhevig aan de conditie van dit probleem en de stabiliteit van de gekozen methode voor het bepalen van de oplossing van het stelsel.

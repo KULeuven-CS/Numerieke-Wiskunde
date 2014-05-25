@@ -1,0 +1,33 @@
+We gebruiken de methode der onbepaalde co\"effici\"enten: \\
+Men kan de co\"effici\"enten van de interpolerende veeltermbepalen door expliciet de interpolatievoorwaarden op te leggen. We zoeken een veelterm van zo laag mogelijke graad die aan de bovenstaande voorwaarden voldoet.   Er zijn 3 punten gegeven, P(-1) , P(0) en P(1) en \'e\'en afgeleide. Dat zijn in totaal 4 interpolatievoorwaarden dus we zoeken een veelterm van graad 3 (deze heeft namelijk 4 te bepalen co\"eficienten). We zoeken dus via de methode der onbepaalde co\"effici\"enten voor n=3 interpolatiepunten, graad is dus 3.\\
+We nemen een algemene veelterm van graad 3: \\
+\indent $ a_0 + a_1x + a_2x^2 + a_3x^3 $ \\
+We gaan nu een stelsel opstellen: \\
+We beginnen met P(-1) = c (met c een waarde die we niet kennen). We krijgen onze eerste vergelijking:\\
+\indent $ a_0 - a_1 + a_2 - a_3 = c$ \\
+Voor P(0) weten we dat P(0) = P(-1) = c. We krijgen: \\
+\indent $ a_0 = c $ \\
+Voor P(1) weten we ook dat P(1) = c. We krijgen de 3de vergelijking: \\
+\indent $ a_0 + a_1 + a_2 - a_3 = c $ \\
+Als laatste weten we nog dan P'(0) = 1. De afgeleide van onze algemene functie = $ a_1 + 2a_2x + 3a_3x^2$ \\
+Hier vullen we 0 in, dan moet dit gelijk zijn aan 1: \\
+\indent $ a_1 = 1$ \\
+Hiermee kunnen we volgend stelsel opstellen: \\
+
+\[
+\sigma(s,i) = \left\{
+    \begin{array}{ccccccccc}
+		a_0 & - & a_1 & + & a_2 & - & a_3 & = & c \\
+							  &&&&&& a_0 & = & c \\
+		a_0 & + & a_1 & + & a_2 & - & a_3 & = & c \\
+		                      &&&&&& a_1 & = & 1 \\
+    \end{array}
+\right.
+\]
+
+
+Hieruit halen we dat $a_1$ = 1 \\
+Wanneer we dit stelsel verder uitwerken krijgen we volgende waarden:
+$a_1$ = 1 , $a_3$ = 1 , $a_2$ = 0  en P(0) = c\\
+Dit levert: \\
+$c+x-x^3$

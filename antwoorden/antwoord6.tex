@@ -1,0 +1,25 @@
+We bespreken de stabiliteit in het algemeen voor \textit{Gauss-eliminatie} en \textit{optimale pivotering}. \\
+\\
+\textbf{Gausselimiatie:} Aan de hand van het voorbeeld in het boek kunnen we zien dat de volgorde van de vergelijkingen bij het gebruik van Gauss \textit{zonder pivotering} de nauwkeurigheid sterk be\"invloedt.\\
+\\
+Een probleem treedt op wanneer het pivotelement $a_{11}$ zeer klein is. Bekijken we het voorbeeld in het boek dan zien we:
+\[
+x_1 = \frac{1}{a_{11}}(b_1-x_2)
+\]
+Door te delen door dit getal bekomen we juist een zeer groot getal. In het voorbeeld zoeken we een waarde $x_1 \approx 1$. Dit wil zeggen dat de rechter factor zeer klein zal moeten zijn. Omdat de getallen $b_1$ en $x_2$ van dezelfde grote-orde zijn als $x_1$ zelf, vormt hier zich een zeer grote relatieve fout. \\
+\\
+Indien de matrices gegeven zijn, kunnen we erop Gauss-eliminatie toepassen en die waarden gebruiken voor bovenstaande analyse. \\
+\\
+\textbf{Gausselimiatie met optimale pivotering:} Hierbij gaan we de absolute waarde van de spilelementen zo groot mogelijk proberen maken om bovenstaande problematiek te voorkomen. We kunnen in dit geval de \textbf{residus} gebruiken als maat voor de stabiliteit. Deze is gedefinieerd als:
+\[
+R = A \bar{X}-B = A (X+ \Delta X) - B
+\]
+Als $\Delta X$ klein is, is het residu. Het omgekeerde is \textbf{niet} altijd waar. Als het probleem slecht geconditioneerd is, kunnen de residuvectoren toch groot worden. Veronderstellen we een perturbatie $R$:
+\[
+A(X+\Delta X) = B + R
+\]
+Dan geldt uit de analyse van paragraaf 9.2 in het boek:
+\[
+\frac{|| \Delta X  ||}{ || X || } \leq \kappa(A)\cdot\frac{||R||}{||B||}
+\]
+Kleine (relatieve) residu's kunnen dus toch afkomstig zijn van grote (relatieve) fouten op X door een slechte conditie.

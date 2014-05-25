@@ -1,0 +1,13 @@
+Het getal 0.1 kan niet exact worden voorgesteld. We werken op de computer met een getallenvoorstelling met basis = 2.\\
+\\
+0.1 in het binair = 0.000110011... dit is niet eindig voor te stellen, er zal dus gebruik gemaakt worden van afkapping of afronding. Hierdoor zal bijvoorbeeld intern $10 * 0.1 \neq . 1 $ zijn. Het gevolg hiervan is dat er een kleine fout zal gemaakt worden bij het intern voorstellen (met basis 2 dus). Bij het outputten wordt er weer omgezet naar decimaal talstelsel en zal men in het begin toch nog de waarde 0 krijgen. Dit komt doordat de gemaakte fout kleiner is dan de machineprecisie. 
+\\
+We combineren dit met onze kennis over Matlab:
+\begin{itemize}
+\item De machineprecisie is de \textbf{grootste} relatieve fout die je kan maken wanneer je een getal voorstelt met de computer.
+\item eps is de afstand tussen 1 en het eerstvolgende machinegetal ( = voorstelbaar getal)
+\item hieruit volgt: emach = eps/2
+\item eps(2) = de afstand tussen 2 en het eerstvolgende machinegetal = eps(1)*2 enz. 
+\item Emach houdt rekening met afronding, eps niet.
+\end{itemize}
+Het getal dat we uitkomen is dus eps/2

@@ -1,0 +1,23 @@
+De differentiefout wordt gegeven door de formule:
+\[
+D_n(x)= \frac{\pi'(x_i)}{(n+1)!} f^{(n+1)}(\xi(x_i))
+\]
+De wordt maximaal als $\pi'(x_i)$ maximaal wordt. $\pi(x)$ wordt gegeven door:
+\[
+\pi(x) = (x-x_0)(x-x_1)...(x-x_n)
+\]
+\[
+\begin{array}{l}
+\pi'(x) = 1(x-x_1)...(x-x_n)+(x-x_0)[(x-x_2)...(x-x_)  \\
++(x-x_1)[(x-x_3)...(x-x_n)+(x-x_2)[...]] \\
+\pi'(x) =(x-x_1)...(x-x_n)+(x-x_0)(x-x_2)...(x-x_n)+  \\
+(x-x_0)(x-x_1)(x-x_3)...(x-x_n)+...+ \\
+(x-x_0)(x-x_1)...(x-x_{n-2})(x-x_{n-1})\\
+\end{array}
+\]
+Deze formule is maximaal indien de factoren maximaal zijn. Dit is het geval als de punten op gelijke afstand van elkaar gelegen zijn.\\
+\\
+Dan geldt:
+\[
+D_n(x_i) = (-1)^{n-i}\frac{i!(n-i)!}{(n+1)!}h^{n}f^{(n+1)}(\xi(x_i))
+\]

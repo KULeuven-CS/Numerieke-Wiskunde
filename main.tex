@@ -1,0 +1,319 @@
+\documentclass[12pt]{article}
+\usepackage[dutch]{babel}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Examenvragen Numerieke Wiskunde 2012}
+\author{Dennis Frett, Karel Domin, Jonas Devlieghere}
+\date{\today}
+
+\begin{document}
+\lstset{ %
+  language=Java,               	  % the language of the code
+  basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Programma verschil, verklaar afwijking}
+\paragraph{Gegeven:}
+Programma:
+\begin{lstlisting}
+som = 0.0
+for i = 0.0:0.1:1.0
+verschil = i - som % == 0
+som = som + 0.1
+end
+\end{lstlisting}
+Output:
+\begin{lstlisting}
+verschil = 0
+verschil = 0
+..
+verschil = 1.1.. e-15
+\end{lstlisting}
+(Syntaxverduidelijking: \% en alles wat erachter komt is commentaar, geen modulo ofzo.)
+\paragraph{Gevraagd:} Verklaar waarom het verschil plots niet meer gelijk is aan 0. Waarvoor staat dat getal?
+\paragraph{Informatie:} Boek pagina 22, PC-zitting over foutenanalyse
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord1.tex}
+\newpage
+
+\section{Matrix met dominante eigenwaarde}
+\paragraph{Gegeven:}
+Maple afdruk: laatste vraag van de examenvragen in de winabundel (Die over het bepalen van eigenwaarden met de methode van de machten).\\
+\\
+Uit de matrix A = [2 1 -1; 0 3 -5; 0 0 -2] wordt de dominante eigenwaarde berekend. De startwaarden zijn: [-1.00001 1.00002 1]. Op de grafiek is zichtbaar dat er eerst naar 2 lijkt te convergeren, maar uiteindelijk toch de juiste eigenwaarde 3 gekozen wordt. Het berekenen gebeurt met de methode van de machten met normalisatie.
+\paragraph{Gevraagd:}
+\begin{itemize}
+	\item Hoe komt het dat er eerst naar 2 geconvergeerd wordt?
+	\item Waarom uiteindelijk toch naar 3?
+	\item Wat als er geen normalisatie gebruikt zou worden?
+\end{itemize}
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord2.tex}
+\newpage
+
+\section{Functiewaarden gegeven, bepaal factor}
+\paragraph{Gegeven:}
+Er is een functie van de vorm p(x) = $a_0 + a_1x + a_2x^2 + ... +a_nx^n$ (n is niet gekend)
+\begin{itemize}
+	\item p(0) = 5
+	\item p(1) = 9
+	\item p(2) = 15
+	\item p(3) = 18
+\end{itemize}
+Alle gedeelde differenties van de vierde graad 1 zijn.
+\paragraph{Gevraagd:} Geef $a_3$.
+\paragraph{Informatie:} Boek paginas 103-105
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord3.tex}
+\newpage
+
+\section{Nulpunten met Jacobi}
+\paragraph{Gegeven:} Een 2-dimensionaal lineair stelsel $Ax = b$ met
+\[ \left( \begin{array}{cc}
+\alpha+1 & 1  \\
+\alpha & 1  \end{array} \right)\]
+We gebruiken de methode van Jacobi om een nulpunt te vinden.
+\paragraph{Gevraagd:} Bepaal alle waarden van alfa waarvoor de methode van Jacobi convergeert (voor alle startwaarden).
+\paragraph{Informatie: Boek pagina 272}
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord4.tex}
+\newpage
+
+\section{NR: Vijfdegraadsveelterm}
+\paragraph{Gegeven:} Een hoop maple-uitvoer. Het gaat over een vijfdegraadsveelterm met een nulpunt in -0.31. Er wordt Newton-Raphson gebruikt om dat nulpunt te berekenen, en je krijgt een logaritmische plot van de fout. De plot is een heel normale, typische plot voor kwadratische convergentie.
+\paragraph{Vraag:}  Verklaar deze grafiek (van de fout dus). Wat is de convergentie-snelheid? Als bijvraag kreeg ik het aantal juiste beduidende cijfers verdubbelt bij elke stap, hoe zie je dat in de grafiek ?
+
+\paragraph{Informatie:} Boek pagina 228
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord5.tex}
+\newpage
+
+\section{Stabiliteit Methodes oplossen Matrices}
+\paragraph{Gegeven:} A,b en twee berekende x matrices: Ax=b. De resultaten liggen ver uit elkaar.
+\paragraph{Gevraagd:} Bespreek stabiliteit van de methodes als machinenauwkeurigheid $10^{-15}$ is.
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord6.tex}
+\newpage
+
+\section{Veeltermen met zo laag mogelijke graad}
+\paragraph{Gegeven:} Veelterm $p(x)$ met $p( − 1) = p(0) = p(1)$ en $p'(0) = 1$
+\paragraph{Gevraagd:} Geef alle veeltermen van zo laag mogelijke graad die hieraan voldoen.
+\paragraph{Informatie:} Zie p.122, methode der onbepaalde coëfficiënten
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord7.tex}
+\newpage
+
+\section{Methode van het Midden}
+\paragraph{Gegeven:} Grafiek
+\paragraph{Gevraagd:} Bespreek (conditie etc).
+\paragraph{Informatie} Boek pagina 238 (Conditie van een wortel)
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord8.tex}
+\newpage
+
+\section{NR: Convergentiefactor en orde}
+\paragraph{Gegeven:} Verschillende grafieken van NR en vereenvoudigde NR
+\paragraph{Gevraagd:} Bespreek en geef convergentiefactor en orde.
+\paragraph{Informatie:} Boek pagina 261
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord9.tex}
+\newpage
+
+\section{Hermitisch interpolerende veelterm}
+\paragraph{Gegeven:} $f_0$, $f'_0$,  $f_1$, $f'_1$
+\paragraph{Gevraagd:} Bepaal de Hermitisch interpolerende veelterm van graad 3
+\paragraph{Informatie:} Boek pagina 122 (letterlijk)
+\paragraph{Antwoord:}
+\input{antwoorden/Antwoord10.tex}
+\newpage
+
+\section{Bespreken grafiek niet-lineair stelsel}
+\paragraph{Gegeven:} Grafieken van niet-lineair stelsel
+\paragraph{Gevraagd:} Bespreek de grafieken
+\paragraph{Informatie:} Boek pagina 261
+\paragraph{Antwoord:} (Ik vermoed dat dit vindbaar is in de slides?)
+\input{antwoorden/antwoord11.tex}
+\newpage
+
+
+\section{Voorstelling 0.3}
+\paragraph{Gegeven:} Een Mapleprogramma voert onderstaande instructies uit
+\begin{lstlisting}
+x = 0.1
+y = 3*0.1
+if y == 0.3
+then print "y is gelijk aan 0.3"
+else print "y is niet gelijk aan 0.3".
+\end{lstlisting}
+Output:
+\begin{lstlisting}
+x = 1.0000000000e-1
+y = 3.0000000000e-1
+y is niet gelijk aan 0.3
+\end{lstlisting}
+\paragraph{Gevraagd:} Leg in detail uit waarom het programma besluit dat y niet gelijk is aan 0.3
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord12.tex}
+\newpage
+
+\section{Stabiliteit functie}
+\paragraph{Gegeven:}  $f(x):e^{x^2}-1-x^2$. Voor het berekenen van de waarde gebruiken we volgend algoritme:
+\begin{lstlisting}
+a = x^2
+b = e^a
+f = b-1-a
+\end{lstlisting}
+\paragraph{Gevraagd:} Is deze numeriek stabiel? Bereken $f(10^{-4})$ met 10 beduidende juiste cijfers.
+\paragraph{Antwoord:} Om de fout uit de macht te halen kunnen we twee benaderingen hanteren:
+\begin{itemize}
+	\item Tailor met het verwaarlozen van hogere orde termen
+	\item Partieel afleiden naar $\epsilon_i$
+\end{itemize}
+\input{antwoorden/antwoord13.tex}
+\newpage
+
+
+\section{Interpolatie sinus}
+\paragraph{Gegeven:} De  functie $f(x) = sin(x)$ in het interval $(-\pi,\pi)$.
+\paragraph{Gevraagd:} Geef een bovengrens op de interpolatie-fout als ge weet dat uw interpolerende veelterm $p$ is die in $n-1$ interpolatiepunten interpoleert.
+\paragraph{Informatie:} p. 94 e.v.
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord14.tex}
+\newpage
+
+\section{Convergentiegetal en -orde}
+\paragraph{Gegeven:}
+\[ \left( \begin{array}{ccc}
+a & b  \\
+c & d \end{array} \right)\]
+met als waarden
+\begin{itemize}
+	\item $a = 10^-5$
+	\item $b = 10^-5$
+	\item $c = 3 - a$
+	\item $d = ab - 2 / b$
+\end{itemize}
+\[ \text{startwaarde} = \begin{bmatrix} 1 \\
+1\end{bmatrix} \text{???}\]
+
+\paragraph{Gevraagd:} Zoek convergentiegetal en orde en waarom is er zo'n grote fout?
+\paragraph{Informatie:} Boek pagina 290
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord15.tex}
+\newpage
+
+\section{Lagrange interpolatie}
+\paragraph{Gegeven:} $-h < x < h$ en
+\[
+f'(x)= \frac{1}{h^2}[\frac{2x-h}{2} \cdot f(-h) - 2x \cdot f(0) + \frac{2x+h}{2} \cdot f(h)] + D(x)
+\]
+met $D(x)$ de differentiatiefout.
+\paragraph{Gevraagd:} Uitdrukking voor $D(x)$. Waar is die het grootst?
+\paragraph{Informatie:} Boek pagina 131
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord16.tex}
+\newpage
+
+\section{Equidistance punten met een fout epsilon}
+\paragraph{Gegeven:} Enkele equidistante punten Xi, f(Xi). Er staat een fout epsilon op 1 van die punten, namelijk op Xk, f(Xk). Als je de tabel van voorwaartse (=gedeelde) differenties opstelt kan je zien hoe de fout zich propageert. Herken je een bepaald patroon? (duh, anders zou hij het niet vragen) Je mag er van uit gaan dat de differenties met hogere graad naar 0 gaan.
+\paragraph{Gevraagd:} Hoe kan je vinden op welk punt Xk de fout zat en hoe groot die is?
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord17.tex}
+\newpage
+
+\section{NR na 1 iteratiestap}
+\paragraph{Gegeven:} Maple prints.
+\paragraph{Gevraagd:}
+\begin{itemize}
+	\item Verklaar waarom de methode van Newton Raphson in 1 iteratiestap op afrondingsfouten na de exacte oplossing vindt!
+	\item Wat is de orde van de convergentie en wat is de convergentiefactor? = reeds beantwoord
+	\item Verklaar in detail waarom de totale stap vereenvoudigde Newton Raphson zo traag convergeert.
+\end{itemize}
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord18.tex}
+\newpage
+
+\section{Conditie van nulpunten}
+\paragraph{Gegeven:} $x^2+2x+c$ ($c<1$)
+\paragraph{Gevraagd:} Bespreek de conditie van de nulpunten. Is de conditie goed/slecht voor de abolute of relatieve fout?
+\paragraph{Informatie:} P.238 ev
+\paragraph{Antwoord:}
+\input{antwoorden/antwoord19.tex}
+\newpage
+
+\section{Schommeling fout NR}
+\paragraph{Gegeven:} de functie $f(x) = (x - 1,1)^5$ (maar uitgewerkt, dus $f(x) = x^5 - 5,5*x^4 + ...$, en er stond niet bij dat dit gelijk was aan $(x-1,1)^5)$. Er is een Maplecode gegeven waarmee we via Newton-Raphson het nulpunt 1,1 willen bepalen. Men tekent de relatieve fouten en de grafiek daalt lineair, en schiet plots omhoog, daalt weer en terug omhoog, ... $\|\|\|...$
+\paragraph{Gevraagd:} Verklaar wat je ziet in de grafiek en geef een variant van Newton-Raphson waar dit probleem niet opduikt.
+\paragraph{Antwoord:}
+een fuctie f(x) van de 6de graad x = 1.1 is een nulpunt een hoop matlab-code die ik niet verstond (alle matlab-oefenzittingen gebrost :-s) uit de commentaar was duidelijk dat ze Newton-Raphson toepasten een grafiek waarin duidelijk is dat de fout telkens kleiner wordt tot ongeveer 40 iteratiestappen, en daarna terug omhoog schiet, en terug zacht naar beneden gaat (en zo herhaalt zich dat).
+Gevraagd: leg in detail deze grafiek uit kun je een betere methode bedenken?
+oplossing : als ge de afgeleide van de gegeven functie berekent, dan is deze voor het opgegeven nulpunt ook nul, net zoals de derde en vierde afgeleide. We hebben dus te maken met een nulpunt met multipliciteit. => gevolg: newton-raphson = 1 - 0/0 Alternatief => Whittaker
+\newpage
+
+\section{Vragen opgelost in handgeschreven nota's}
+\subsection{Examen 7 Juni 2010}
+\subsubsection{Vraag 1}
+\paragraph{Gegeven:} Gegeven de volgende gegevens:
+$f[x0,x0,x1,x1] = 1$; $f''(x0)=0$; $f''(x1)=0$; $f'(x_0)=0$; $f'(x1)=0$; $f(x_0)=2$; $x_0=0$; $x_1=1$;
+\paragraph{Gevraagd:} Kan je hiermee f(x1) uitrekenen?
+\subsubsection{Vraag 2}
+\paragraph{Gegeven:}
+Gegeven de iteratieformule $x(k+1) = (x(k) - a)^2 - 1$, met $a > 0$.
+\paragraph{Gevraagd:} Voor welke reële waarden van a en $x(0)$ is er convergentie, en naar welke waarden van $x$ gebeurt dit? Wanneer treedt er kwadratische convergentie op?
+\subsubsection{Vraag 4}
+\paragraph{Gegeven:} Gegeven maple code waar methode van de machten werd op toegepast. De gegevens werden erin genormeerd en mu werd uitgezet op de grafiek. Daarop was te zien hoe die convergeerde naar de dominante eigenwaarde. Ook werd er een grafiek gegeven die de relatieve fout van mu (in logaritmische schaal) uitzet tov het aantal iteratiestappen. Die was dalend en in 'rechte'-vorm
+\paragraph{Gevraagd:} Je moest de grafieken bespreken en een bijvraag was hoe je op de laatste grafiek de convergentiesnelheid kon zien.
+\subsection{Examen 8 Juni 2010}
+\subsubsection{Vraag 1}
+\paragraph{Gegeven:} Een fuctie f(x) van de 6de graad x = 1.1 is een nulpunt een hoop matlab-code die ik niet verstond (alle matlab-oefenzittingen gebrost :-s) uit de commentaar was duidelijk dat ze Newton-Raphson toepasten een grafiek waarin duidelijk is dat de fout telkens kleiner wordt tot ongeveer 40 iteratiestappen, en daarna terug omhoog schiet, en terug zacht naar beneden gaat (en zo herhaalt zich dat).
+\paragraph{Gevraagd:}  Leg in detail deze grafiek uit kun je een betere methode bedenken?
+\subsubsection{Vraag 2}
+\paragraph{Gegeven:} Veelterm van nen bepaalde graad (5de graad?) De exacte integraal van deze veelterm van -1 tot 1 is een bepaalde waarde (waarde is gegeven) We gaan de integraal bepalen met twee kwadratuurformules. Weer matlabcode (:-s) x1 = -alfa, x2 = 0, x3 = alfa H1, H2 en H3 gegeven \\
+\\
+Eerste kwadratuurformule: alfa heeft bepaalde waarde de waarde van de kwadratuurformule is exact de opgegeven waarde
+\\
+Tweede kwadratuurformule: ander alfa waarde, de rest hetzelfde. de waarde van de kwadratuurfomule geeft nu een andere oplossing dan hierboven
+\paragraph{Gevraagd:}
+\begin{itemize}
+	\item Kunnen we hieruit besluiten dat de nauwkeurigheidsgraad van de eerste kwadratuurformule beter is dan de tweede? (uiteraard niet... anders zou hij't zo niet vragen)
+	\item Bereken de nauwkeurigheidsgraad van de kwadratuurforumules
+\end{itemize}
+\subsubsection{Vraag 3}
+\paragraph{Gegeven:}
+$f(x) = x² - x + 1$ Weeral matlabcode (:-s) $x*$ = 1 Door middel van substitutiemethodes word deze functie benaderd, ne keer langs links, en langs rechts (ik dacht voor x=0,9 en x=1,1) Twee grafieken gegeven, op de ene (x=0,9) zie je fout kleiner worden, op andere zie je fout groter worden. Zie dus figuur 2.10 op pagina 221.  bepalen ofzo
+\paragraph{Gevraagd:}
+Verklaar. Bijvraag was iets van convergentiefactor.
+
+\subsubsection{Vraag 4}
+\paragraph{Gegeven:}
+\[ \left( \begin{array}{ccc}
+2 & 1 & -1 \\
+0 & 3 & -5 \\
+0 & 0 & -2 \\
+\end{array} \right)\]
+en X = (-1,1,1)
+\paragraph{Gevraagd:} Wat gebeurd er als we \textit{von Mises} op een matrix A uitvoeren met en een startvector X.
+
+
+
+\end{document}

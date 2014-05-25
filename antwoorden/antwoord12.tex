@@ -1,0 +1,13 @@
+Getal 0.1 wordt binair door een repeterend patroon (ofzo) voorgesteld en dus als we inlezen wordt er een deel van dat patroon afgebroken en dus een kleine fout gemaakt. een geheel getal zoals 3 kan wel exact worden voorgesteld, en dus wordt de formule met fouten:
+\[
+fl(x) = 0.1(1+e)
+\]
+\[
+y= 3*x(1+e')(1+e)
+\]
+\[
+fl(y) = y(1+e)
+\]
+en dus wordt er drie keer een foutje gemaakt en zal y dus niet meer exact gelijk aan 0.3 zijn (dat trouwens ook niet exact kan worden voorgesteld maar ook, zoals x, wordt afgebroken)\\
+\\
+Bij het uitschrijven van y, wordt de binaire info terug omgezet naar decimaal talstelsel en vermits de fout die wordt gemaakt kleiner is als de machineprecisie zie je die eerst niet.

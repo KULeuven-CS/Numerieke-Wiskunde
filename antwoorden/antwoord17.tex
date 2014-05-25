@@ -1,0 +1,25 @@
+Stel gewoon een tabel op voor N elementen:
+\begin{lstlisting}
+X1      f(X1)
+...
+Xk-2    f(Xk-2)
+Xk-1    f(Xk-1)
+Xk      f(Xk)+epsilon
+Xk+1    f(Xk+1)
+Xk+2    f(Xk+2)
+...
+Xn      f(Xn)
+\end{lstlisting}
+en reken die dan een paar stappen uit. Je zal zien dat de fout epsilon groter wordt en zich uitbreidt. Ook wisselt de fout steeds van teken: dit komt omdat als je de gedeelde differenties uitrekent, je soms -(f(Xk)+epsilon) moet doen, wat de epsilon negatief maakt. Als je vervolgens nog eens moet aftrekken, -(f(Xk)-epsilon) dus, dan wordt epsilon weer positief. Uiteindelijk bekom je volgend patroon in de fouten, dat eigenlijk de driehoek van pascal/binonium van newton is!
+\begin{lstlisting}
+                             eps
+                     eps
+             eps             -4*eps
+      eps            -3*eps
+eps           -2*eps          6*eps
+      -eps           3*eps
+             eps             -4*eps
+                     -eps
+                             eps
+\end{lstlisting}
+enzoverder. De fout verbreedt dus, maar de tabel wordt kleiner. Uiteindelijk zal je dus met 1 getal overblijven (want de f(x)'en worden allemaal 0 als je blijft doorrekenen. Stel dat dat getal bijvoorbeeld -10*eps is. Je zoekt in de driehoek van pascal op waar die "10" staat, en zie je dat op de 6e rij staat tussen 1 5 10 12 10 5 1. De 10 staat op de 3e plaats links, maar ook op 3e plaats rechts. Dit komt overeen met k of n-k = 3, dus het punt waar de fout op zit staat op derde plaats in de tabel OF op de n-3 plaats.

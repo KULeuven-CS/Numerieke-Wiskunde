@@ -1,0 +1,21 @@
+De convergentiesnelheid van Newton-Raphson is gekend:
+\begin{itemize}
+	\item Kwadratisch als $x^{*}$ enkelvoudig is
+	\item Lineair als $x^{*}$ een meervoudig nulpunt is
+\end{itemize}
+We weten bovendien dat als de functie $F$ afleidbaar is dat geldt:
+\[
+\rho = F'(x^{*})=1-\frac{1}{m}
+\] 
+Waarmee vinden daarmee de \textbf{convergentiefactor} voor Newton-Raphson:
+\[
+\rho=1-\frac{1}{m}=1-m^{-1}
+\] 
+Deze geeftaan hoeveel de benaderingsfout verkleint in de $k-$de benaderings-stap als $k \rightarrow \infty$. Hoe kleiner $\rho$, hoe sneller de functie convergeert.\\
+\\
+De convergentiefactor is echter niet voldoende. We moeten ook de orde van convergentie ($p$) bepalen. Het proces is van orde $n$ als $F^{n}(x^{*}) \neq 0$ en er geldt:
+\[
+\rho_n = \frac{F^{n}(x^{*})}{n!}
+\]
+\textbf{Enkelvoudig nulpunt:} Dan geldt dat $m = 1$ en over het algemeen is $F''(x^{*}) \neq 0$ als $F(x)=\frac{x-f(x)}{f'(x)}$. De orde is dus bijgevolg \textbf{kwadratisch} indien het nulpunt enkelvoudig is. \\\\
+\textbf{Meervoudig nulpunt:} Als $m > 1$ hebben we meervoudige nulpunten en is de methode bijgevolg slechts lineair.

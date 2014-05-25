@@ -1,0 +1,15 @@
+De bovengrens wordt gegeven door de formule
+\[
+E_n = max_{x \in [- \pi, \pi]}|E_n(x)| \\
+\leq max_{x \in [- \pi, \pi]} |\frac{|(x-x_0)(x-x_1)...(x-x_{n-2})|}{(n-2+1)!} \cdot max_{x \in [- \pi, \pi]}|f^{(n-2+1)})(x)|
+\]
+
+Aangezien de afgeleide van de sinus ofwel een cosinus ofwel een sinus is is het maximum van $|f^{(n-2+1)})(x)| = 1$.
+Veronderstellen we bijvoorbeeld equidistante punten
+\[
+x_i = -\pi + i \cdot (\frac{2\pi}{n})
+\]
+geeft dit
+\[
+E_n \leq \frac{|\prod_{0<i<n-2}|}{(n-1)!}
+\]
