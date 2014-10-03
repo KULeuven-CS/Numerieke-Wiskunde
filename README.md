@@ -3,11 +3,7 @@ NumeriekeWiskunde
 
 Oplossing Examenvragen Numerieke Wiskunde (B-KUL-G0N90B)
 
-## PDF
-[InTeXration](https://github.com/JDevlieghere/InTeXration) automatically generates a compiled version of the latex documents inside this repository.
-
- - [PDF](http://intexration.jonasdevlieghere.com:8000/pdf/JDevlieghere/NumeriekeWiskunde/main)
- - [Log](http://intexration.jonasdevlieghere.com:8000/log/JDevlieghere/NumeriekeWiskunde/main)
+[![PDF Status](https://www.sharelatex.com/github/repos/KULeuven-CS/NumeriekeWiskunde/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/KULeuven-CS/NumeriekeWiskunde/builds/latest/output.pdf)
 
 ## Contributors
 
