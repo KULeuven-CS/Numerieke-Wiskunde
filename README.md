@@ -11,7 +11,7 @@ Please **star** this repository if you found its content useful!
 
 Note that while Prof. Van Barel is no longer teaching this course since Prof. K. Meerbergen the questions might stil be relevant to todays examn.
 
-This document comes without guarantees and may contain errors. Please be kind and help us fix the
+This document comes without guarantees and may contain errors. Please be kind and help us fix them (and then you can enter this little hall of github-fame below):
 
 ## Contributors
 
