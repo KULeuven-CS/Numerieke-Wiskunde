@@ -25,5 +25,5 @@ Minor contirbutions:
   - Dieter Castel
   - Tom Sydney Kerckhove
   - Frederik-Baetens
-  - ** Your name here **
+  - **Your name here**
   
